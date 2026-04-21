@@ -2,11 +2,13 @@ import csv
 import os
 import re
 from glob import glob
+from dotenv import load_dotenv
 from openpyxl import Workbook
 import pandas as pd
 
 
 def cargarDatosCsv():
+
     carpeta = "Data"
 
     archivos = glob(os.path.join(carpeta, "*.csv"))
@@ -71,11 +73,20 @@ def cargarDatosCsv():
 
         ws.append(fila)
     df = pd.DataFrame(data)
-    df["Fecha"] = pd.to_datetime(df["Fecha"], errors="coerce")
 
+
+
+    print(df)
 
     # Guardar
     salida = os.path.join(carpeta, "Consolidado.xlsx")
     wb.save(salida)
-    return(df)
+
+
+cargarDatosCsv()
+
+
+
+
+
 
