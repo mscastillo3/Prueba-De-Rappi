@@ -198,8 +198,18 @@ st.plotly_chart(fig2, use_container_width=True)
 # Head MAP
 # =========================
 
+dias = {
+    "Monday": "Lunes",
+    "Tuesday": "Martes",
+    "Wednesday": "Miércoles",
+    "Thursday": "Jueves",
+    "Friday": "Viernes",
+    "Saturday": "Sábado",
+    "Sunday": "Domingo"
+}
+
 st.subheader("Mapa de Calor por dias de la semana")
-df["DiaSemana"] = df["Fecha"].dt.day_name(locale="es_ES")
+df["DiaSemana"] = df["Fecha"].dt.day_name().map(dias)
 dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 heatmap_data = df.groupby("DiaSemana").mean(numeric_only=True)
 heatmap_data = heatmap_data.reindex(dias)
