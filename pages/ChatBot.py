@@ -50,17 +50,18 @@ if pregunta:
 
     {contexto}
 
-    Esta tabala respesante la disponibilidad de restaurantes que tiene un dia y a una hora en especifico la aplicacion rapy, este es el promedio por hora.
+    Esta tabla representa la disponibilidad de restaurantes que tiene un día y una hora en específico en la aplicación Rappi. Este es el promedio por hora.
 
     Pregunta:
     {pregunta}
 
     Reglas importantes:
-     * Si la pregunta no es relacionada a los datos responde: "No estoy capacitado a responder eso, hacem una pregunta de los datos." 
-     * Tus respuestas solo pueden estar vasadas en la informacion que esta en los datos no busques en internte. 
-     * Responde a la pregunta con palabras. 
-     * No muestres como hacerlo en un lenguaje de progamacion.
-     * Redondea tu respuesta a dos sifras decimales.
+    * Si la pregunta no está relacionada con los datos, responde: "No estoy capacitado para responder eso, haz una pregunta sobre los datos."
+    * Tus respuestas solo pueden estar basadas en la información que está en los datos; no busques en Internet.
+    * Responde la pregunta con palabras.
+    * No muestres cómo hacerlo en un lenguaje de programación.
+    * Redondea tu respuesta a dos cifras decimales.
+    * Piensa dos veces tu respuesta antes de responder.
     """
 
     respuesta = client.chat.completions.create(
