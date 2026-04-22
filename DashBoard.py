@@ -122,9 +122,6 @@ else:
     df = df
 
 
-
-
-
 # =========================
 # HEADER
 # =========================
@@ -136,7 +133,7 @@ st.caption(f"Última actualización: {datetime.now().strftime('%Y-%m-%d %H:%M')}
 
 
 # =========================
-# KPIs PRINCIPALES
+# DATOS PRINCIPALES
 # =========================
 col1, col2= st.columns(2)
 
@@ -153,7 +150,7 @@ st.divider()
 # GRÁFICOS PRINCIPALES
 # =========================
 
-# ---- Evolución temporal
+
 
 st.subheader("Promedio de disponibilidad por tiempo")
 
@@ -194,7 +191,7 @@ fig2.update_xaxes(
 st.plotly_chart(fig2, use_container_width=True)
 
 
-
+# =========================
 # Head MAP
 # =========================
 
