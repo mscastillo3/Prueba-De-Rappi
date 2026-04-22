@@ -13,7 +13,7 @@ client = OpenAI(
 
 # Cargar datos
 df = pd.read_excel("Data/Consolidado.xlsx")
-st.sidebar.image("Imagenes\image.png", use_container_width=True)
+st.sidebar.image("Imagenes/image.png", use_container_width=True)
 grupos = defaultdict(list)
 time_cols = df.columns.drop("Fecha")
 

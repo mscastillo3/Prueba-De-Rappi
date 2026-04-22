@@ -65,7 +65,7 @@ from collections import defaultdict
 # =========================
 
 
-st.sidebar.image("Imagenes\image.png", use_container_width=True)
+st.sidebar.image("Imagenes/image.png", use_container_width=True)
 
 st.sidebar.title("🔎 Filtros")
 
